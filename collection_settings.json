@@ -1,0 +1,37 @@
+{
+  "settings": [
+    {
+      "key": "checks.dice",
+      "name": "collection_settings/dice",
+      "description": "collection_settings/dice_hint",
+      "group": "collection_settings/dice_group",
+      "type": "choice",
+      "source": null,
+      "allow_custom": true,
+      "automatic": "collection_settings/dice_auto",
+      "pattern": "^(?:none|0|(?:[1-9][0-9]?|100)?d(?:[2-9]|[1-9][0-9]+))$",
+      "options": [
+        {
+          "value": "d20",
+          "name": "d20"
+        },
+        {
+          "value": "d6",
+          "name": "d6"
+        },
+        {
+          "value": "2d6",
+          "name": "2d6"
+        },
+        {
+          "value": "d100",
+          "name": "d100"
+        },
+        {
+          "value": "none",
+          "name": "collection_settings/no_dice"
+        }
+      ]
+    }
+  ]
+}
