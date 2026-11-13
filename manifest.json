@@ -1,7 +1,7 @@
 {
   "id": "stat_checks",
   "name": "Stat Checks",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "author": "ct",
   "description": "One scenario command, check: roll a character's stat plus dice against a difficulty and branch the story on success or failure.",
   "category": "gameplay",
@@ -12,7 +12,7 @@
     "tests/*.cs"
   ],
   "depends": [
-    "stats_base>=1",
-    "dialog_base>=1"
+    "stats_base>=0.1.0",
+    "dialog_base>=0.1.0"
   ]
 }

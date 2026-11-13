@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`, `2d6`, `1d100` 등. `none`은 아무것도 굴리지 않아 판정이 단순 기준선이 됩니다. 능력치만으로, 늘 같은 방식으로 결정됩니다 — 노벨에 유용합니다("충분히 용감한가, 아닌가").
 - `bonus=` — 합계에 더해집니다. 음수여도 됩니다.
 - `else=` — 실패일 때 갈 레이블.
-- `quiet=1` — 굴림 줄을 표시하지 않습니다.
+- `quiet>=0.1.0` — 굴림 줄을 표시하지 않습니다.
 
 합계는 **능력치 + 주사위 + 보너스**입니다.
 
@@ -68,7 +68,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 
 ### 결과를 제 방식으로 말하기
 
-판정 뒤에는 이 대화 변수들에 굴림이 남습니다: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc`, `check_result`. `quiet=1`과 함께라면 `ptext` 줄이 이야기의 말로 결과를 표현할 수 있습니다:
+판정 뒤에는 이 대화 변수들에 굴림이 남습니다: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc`, `check_result`. `quiet>=0.1.0`과 함께라면 `ptext` 줄이 이야기의 말로 결과를 표현할 수 있습니다:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

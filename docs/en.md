@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`, `2d6`, `1d100` and so on. `none` rolls nothing, which makes the check a plain threshold: the stat alone decides, the same way every time — useful in a novel ("brave enough or not").
 - `bonus=` — added to the total; it may be negative.
 - `else=` — the label for a failure.
-- `quiet=1` — do not show the roll line.
+- `quiet>=0.1.0` — do not show the roll line.
 
 The total is **stat + dice + bonus**.
 
@@ -68,7 +68,7 @@ A game that wants all its checks without chance sets `"checks.dice": "none"`.
 
 ### Telling the result your own way
 
-After a check these dialog variables hold the roll: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` and `check_result`. With `quiet=1` a `ptext` line can show it in the story's words:
+After a check these dialog variables hold the roll: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` and `check_result`. With `quiet>=0.1.0` a `ptext` line can show it in the story's words:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

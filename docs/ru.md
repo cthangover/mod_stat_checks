@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`, `2d6`, `1d100` и так далее. `none` ничего не бросает: проверка превращается в простой порог — решает только стат, всегда одинаково. Удобно в новелле («достаточно ли смел»).
 - `bonus=` — прибавляется к сумме; может быть отрицательным.
 - `else=` — метка для провала.
-- `quiet=1` — не показывать строку броска.
+- `quiet>=0.1.0` — не показывать строку броска.
 
 Сумма — это **стат + кубик + бонус**.
 
@@ -68,7 +68,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 
 ### Свой рассказ об исходе
 
-После проверки бросок лежит в этих переменных диалога: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` и `check_result`. С `quiet=1` строка `ptext` может рассказать о нём словами истории:
+После проверки бросок лежит в этих переменных диалога: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` и `check_result`. С `quiet>=0.1.0` строка `ptext` может рассказать о нём словами истории:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

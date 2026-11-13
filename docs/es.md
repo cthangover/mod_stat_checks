@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`, `2d6`, `1d100` y demás. `none` no tira nada: la prueba se convierte en un umbral simple; decide solo la estadística, siempre igual — útil en una novela («lo bastante valiente o no»).
 - `bonus=` — se suma al total; puede ser negativo.
 - `else=` — la etiqueta del fallo.
-- `quiet=1` — no mostrar la línea de la tirada.
+- `quiet>=0.1.0` — no mostrar la línea de la tirada.
 
 El total es **estadística + dados + bonus**.
 
@@ -68,7 +68,7 @@ Un juego que quiera todas sus pruebas sin azar pone `"checks.dice": "none"`.
 
 ### Contar el resultado a tu manera
 
-Tras una prueba, estas variables del diálogo guardan la tirada: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` y `check_result`. Con `quiet=1`, una línea `ptext` puede contarlo con palabras de la historia:
+Tras una prueba, estas variables del diálogo guardan la tirada: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` y `check_result`. Con `quiet>=0.1.0`, una línea `ptext` puede contarlo con palabras de la historia:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`、`2d6`、`1d100` など。`none` は何も振らず、判定は単なるしきい値になります。ステータスだけで決まり、毎回同じ——ノベルならではの使い方（「勇気があるか、ないか」）。
 - `bonus=` — 合計に加算。負でもかまいません。
 - `else=` — 失敗のときのラベル。
-- `quiet=1` — 出目の行を表示しない。
+- `quiet>=0.1.0` — 出目の行を表示しない。
 
 合計は **ステータス + ダイス + ボーナス** です。
 
@@ -68,7 +68,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 
 ### 結果を自分の言葉で語る
 
-判定のあと、これらの会話変数に出目が残ります: `check_stat`、`check_value`、`check_roll`、`check_bonus`、`check_total`、`check_dc`、`check_result`。`quiet=1` と組み合わせれば、`ptext` の行で物語の言葉として語れます:
+判定のあと、これらの会話変数に出目が残ります: `check_stat`、`check_value`、`check_roll`、`check_bonus`、`check_total`、`check_dc`、`check_result`。`quiet>=0.1.0` と組み合わせれば、`ptext` の行で物語の言葉として語れます:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

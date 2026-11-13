@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`、`2d6`、`1d100` 等。`none` 不掷任何骰子，检定变成单纯的门槛：只看属性，每次结果都一样——适合小说（"够不够勇敢"）。
 - `bonus=` — 加进总数；可以为负。
 - `else=` — 失败时跳转的标签。
-- `quiet=1` — 不显示掷骰行。
+- `quiet>=0.1.0` — 不显示掷骰行。
 
 总数 = **属性 + 骰子 + 加值**。
 
@@ -68,7 +68,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 
 ### 用自己的话讲述结果
 
-检定之后，这些对话变量保存着掷骰信息：`check_stat`、`check_value`、`check_roll`、`check_bonus`、`check_total`、`check_dc` 和 `check_result`。配合 `quiet=1`，一行 `ptext` 就能用故事自己的话来讲述结果：
+检定之后，这些对话变量保存着掷骰信息：`check_stat`、`check_value`、`check_roll`、`check_bonus`、`check_total`、`check_dc` 和 `check_result`。配合 `quiet>=0.1.0`，一行 `ptext` 就能用故事自己的话来讲述结果：
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open

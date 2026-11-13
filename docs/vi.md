@@ -52,7 +52,7 @@ check <stat> <difficulty> [who=player] [dice=d20] [bonus=2] [else=label] [quiet=
 - `dice=` — `d20`, `2d6`, `1d100` v.v. `none` không tung gì cả: phép kiểm thành ngưỡng thuần túy — chỉ số tự quyết định, mỗi lần như nhau. Hữu ích trong tiểu thuyết ("đủ can đảm hay chưa").
 - `bonus=` — cộng vào tổng; có thể âm.
 - `else=` — nhãn cho lần thất bại.
-- `quiet=1` — không hiển thị dòng tung xúc xắc.
+- `quiet>=0.1.0` — không hiển thị dòng tung xúc xắc.
 
 Tổng bằng **chỉ số + xúc xắc + điểm cộng**.
 
@@ -68,7 +68,7 @@ Game nào muốn mọi phép kiểm đều không nhờ may rủi thì đặt `"
 
 ### Kể kết quả theo cách riêng của bạn
 
-Sau mỗi phép kiểm, các biến hội thoại sau giữ lại lần tung: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` và `check_result`. Với `quiet=1`, một dòng `ptext` có thể kể kết quả bằng ngôn từ của câu chuyện:
+Sau mỗi phép kiểm, các biến hội thoại sau giữ lại lần tung: `check_stat`, `check_value`, `check_roll`, `check_bonus`, `check_total`, `check_dc` và `check_result`. Với `quiet>=0.1.0`, một dòng `ptext` có thể kể kết quả bằng ngôn từ của câu chuyện:
 
 ```scenario
 check str 14 quiet=1 else=stuck -> :open
