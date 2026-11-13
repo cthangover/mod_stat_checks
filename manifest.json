@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "ct",
   "description": "One scenario command, check: roll a character's stat plus dice against a difficulty and branch the story on success or failure.",
-  "category": "gameplay",
+  "categories": ["gameplay"],
   "sources": [
     "src/**/*.cs"
   ],
